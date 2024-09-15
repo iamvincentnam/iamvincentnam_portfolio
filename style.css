@@ -1,0 +1,25 @@
+
+*{margin: 0;
+    padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+/* .hi_am_vincent{
+    text-shadow: 2px 2px 0 #3b3b3ba1 !important;} */
+.download_resume{
+    width: 12em;
+    /* border: 2px solid silver; */
+}
+.portfolio_projects{
+    cursor: pointer;
+}
+.portfolio_projects.development img{
+   height: 300px !important;
+
+}
+.workCategorytab{cursor: pointer;}
+
+section.blogContainer{
+box-sizing: border-box;
+}
+
