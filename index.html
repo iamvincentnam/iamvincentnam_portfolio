@@ -4,49 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" >
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-   
-<link rel="stylesheet" href="app.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CSSRulePlugin.min.js"></script>
 
 <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
 
   
 </head>
-<body class="px-4">
+<body class="px-4 bg-gray-100">
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
  
    <nav class="flex flex-col md:flex-row items-center gap-4 container mx-auto my-12">
-    <img src="assets/vincentNam-snapshot.JPG"  alt="vin pics"  class="md:w-40 md:h-40 w-20 h-20 rounded-full">
-    <p><a href="https://x.com/iamvincentnam"class="underline">@iamvincentnam</a></p>
+    <img src="assets/vincentNam-snapshot.JPG"  alt="vin pics"  class="md:w-40 md:h-40 w-20 h-20 rounded-full shadow-lg p-1">
+    <p><a href="https://x.com/iamvincentnam"class="underline font-semibold">@iamvincentnam</a></p>
     <ul class="flex border rounded-full md:ml-auto font-bold text-gray-600">
-        <li class ="px-6 py-2 rounded-full"><a href="#aboutme">About Me</a></li>
-        <li class ="px-6 py-2"><a href="#works">Work</a></li>
-        <li class ="px-6 py-2"><a href="#">Solutions</a></li>
+        <li class ="navLink px-6 py-1 hover:text-gray-900"><a href="#aboutme">About Me</a></li>
+        <li class ="navLink px-6 py-1 hover:text-gray-900"><a href="#works">Work</a></li>
+        <li class ="navLink px-6 py-1 hover:text-gray-900"><a href="#">Solutions</a></li>
     </ul>
    </nav>
 
    <header class="container mx-auto" >
 <h2 class="text-3xl md:max-w-2xl lg:max-w-3xl text-gray-700 hi_am_vincent">Hi, I'm Vincent.</h2>
-<h4 class="text-2xl my-4 text-gray-600">A <span class="text-blue-900" >Frontend </span> Web Developer.</h4>
+<h4 class="text-2xl my-4 text-gray-600" id="title">A <span class="text-blue-900" >Frontend </span>Developer/ <span>Technical Writer</span>.</h4>
   
 <div class="my-6 flex gap-1 items-center">
-    <a class="bg-blue-900 text-center text-white px-4 py-1 rounded-full hover:opacity-80" href="#">Start  project </a>
+    <a class="bg-gray-900 text-center text-white px-4 py-1 rounded-full hover:opacity-80" href="#">Start  project </a>
     <a class="bg-light-900 border rounded-full  text-center text-white px-4 py-1 rounded-full hover:opacity-80 group" href="#"> <i class="las la-arrow-right -rotate-45 group-hover:rotate-0 transition w-5"></i><img class="-rotate-45 group-hover:rotate-0 transition w-5" width="30" height="30" src="https://img.icons8.com/material-two-tone/30/arrow.png" alt="arrow"/></a>
 </div>
 </header>
 
-<section class="container mx-auto my-12">
+<section class="container mx-auto my-12 shadow-lg lg:border-r lg:border-b">
 <div class="md:ml-auto   md:max-w-3xl rounded p-2" id="aboutme">
-    <h4 class=" text-xl my-6 leading-9">
-        A detailed oriented Front End Developer with a flair to transform ideas into impactful digital solutions. Comfortable working with a varieties of technologies including HTML, CSS, Vue, PHP and Javascript for Development and Adobe Illustrator with Adobe AE for design with competennce in the use of MicroSoft Packages.Thus, Repeatedly received commendation and positive reviews for exceptional diligence and innovation in tax execution 
-         
+    <h4 class=" md:text-xl my-6 leading-9 text-gray-800 font-semibold md:font-normal aboutMe" id="aboutMe">
+      A detailed-oriented Frontend Developer with passion for transforming ideas into impactful digital solutions. I work confidently with various technologies, including Javascript, PHP,  Vue js for development, alongside Adobe Illustrator, Adobe After Effects for design. I'm also proficient in MicroSoft Office applications. My commintment to diligence and innovation has earned me consistent praise for my works.  
+        <!-- A detailed oriented Front End Developer with a flair to transform ideas into impactful digital solutions. Comfortable working with a varieties of technologies including HTML, CSS, Vue, PHP and Javascript for Development and Adobe Illustrator with Adobe AE for design with competennce in the use of MicroSoft Packages.Thus, Repeatedly received commendation and positive reviews for exceptional diligence and innovation in tax execution 
+          -->
 
 
         <p class="mt-8">
-            I believe that Design and development should be both functional and user experience oriented. Thus, I am dedicated to delivering exceptional user experience project through thoughtful development and payment of keen attention to detail
+            I believe that Design and development should be functional and focused on user experience. I am dedicated to delivering projects that offer exceptional user experiences through thoughtful development and meticulous attention to detail.
         </p>
     </h4>
     
-    <div>
+    <div class="my-6">
         <a class="download_resume flex gap-4  items-center font-bold underline  text-center text-blue-900 hover:opacity-80 group w-45" href="assets/Vincent-Nam-Resume-2024.pdf" width="100px" download="vincent_namResume.pdf"> Download Resume <img class="-rotate-45 group-hover:rotate-0 transition  border rounded-full p-1" width="30" height="30" src="https://img.icons8.com/material-two-tone/30/arrow.png" alt="arrow"/> 
          </a>
       
@@ -59,72 +66,117 @@
 </section>
 
 <section class="work_done container mx-auto-my12  mx-auto p-4 rounded" id="works">
-    <h2 class="text-5xl my-6">
+    <h2 class="md:text-5xl text-center md:text-left text-3xl my-6 uppercase text-gray-900">
         Portfolio
     </h2>
-    <nav class="flex flex-col md:flex-row justify-between my-12 gap-4">
-        <ul class="flex my-6 gap-2">
-            <li class="px-6 py-1 workCategorytab rounded-full bg-gray-900 text-white">Development</li>
-            <li class="px-6 py-1 workCategorytab">Writing</li>
+    <nav class="flex flex-col md:flex-row justify-between my-12">
+        <ul class="flex my-6 gap-6">
+            <li class="px-6 py-1 workCategorytab rounded-full bg-gray-900 text-white cursor-pointer text-xl">Development</li>
+            <li class="text-xl  px-6 py-1 workCategorytab cursor-pointer">Writing</li>
             <!-- <li class="px-6 py-1 workCategorytab">Design</li>
             -->
            
         </ul>
 
-        
-
-        
-        <!-- <ul class="flex gap-2 items-center ml-auto">
-            <li class="px-2  border rounded-full "><img src="assets/hamburger.png" height="20px" alt=""></li>
-            <li class="px-2  border rounded-full "><img src="assets/hamburger.png" height="20px" alt=""></li>
-           
-           
-        </ul> -->
     </nav>
     <!--Grid for development-->
-<div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-6 mx-auto portfolio_projects development">
+      <!--- Grid for development begins here-->
+<div class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-6 mx-auto items-start portfolio_projects development">
 
+  <div class="max-w-sm rounded overflow-hidden shadow-lg devCard">
+    <img class="w-full" src="assets/tapswap_code_screenshot.png" alt="Tapswap app img">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">TapSwap Clone App</div>
+      <p class="text-gray-700 text-base">
+        Crypto meme tapping
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tapswap</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#crypto</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#web3</span>
+    </div>
+  </div>
+  <div class="max-w-sm rounded overflow-hidden shadow-lg devCard">
+    <img class="w-full" src="assets/doritos_landingpage.png" alt="Tapswap app img">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">Doritos Landing Page Design</div>
+      <p class="text-gray-700 text-base">
+        Landing Page
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#landingpage</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#web3</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#webdev</span>
+    </div>
+  </div>
+  <div class="max-w-sm rounded overflow-hidden shadow-lg devCard">
+    <img class="w-full" src="assets/dark_bg_landing_page.png" alt="Tapswap app img">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2 hover:opacity-70"><a href="https://darkbglandingpage.vercel.app/">Dark Background Landing Page</a> </div>
+      <p class="text-gray-700 text-base">
+        Landing Page Design
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#webdesign</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#landingpge</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#web3</span>
+    </div>
+  </div>
+  <div class="max-w-sm rounded overflow-hidden shadow-lg devCard">
+    <img class="w-full" src="assets/Screenshot 2023-08-20 205144.png" alt="Tapswap app img">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">Music App</div>
+      <p class="text-gray-700 text-base">
+       music App UI
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#webdesign</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#web app</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#web3</span>
+    </div>
+  </div>
+  <div class="max-w-sm rounded overflow-hidden shadow-lg devCard">
+    <img class="w-full" src="assets/odinukwe-stores.png" alt="Tapswap app img">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">Odinukwe Stores</div>
+      <p class="text-gray-700 text-base">
+       supermarket Invoice Receipt
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#sales</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#webapp</span>
+     
+    </div>
+  </div>
+  
+  
+    </div>
 
-    <div class=" mx-auto shadow">
-        <img src="assets/tapswap_code_screenshot.png" alt="">
-        <h4 class="text-2xl leading-9 m-0 p-0"> TapSwap clone App</h4>
-        <p class="my-0 font-semibold">Crypto meme tapping</p>
-    </div>
-    <div class="mx-auto shadow">
-        <img src="assets/doritos_landingpage.png" alt="">
-        <h4 class="text-2xl leading-9 m-0 p-0"> Doritos Landing Page Design</h4>
-        <p class="my-0 font-semibold">Landing Page</p>
-    </div>
-    <div class="mx-auto shadow">
-        <img src="assets/dark_bg_landing_page.png" alt="" class="mx-auto">
-        <h4 class="text-2xl leading-9 m-0 p-0"> Dark Background Landing Page</h4>
-        <p class="my-0 font-semibold">Flyo</p>
-    </div>
-    <div class="mx-auto shadow">
-        <img src="assets/odinukwe-stores.png" alt="odinukwe stores">
-        <h4 class="text-2xl leading-9 m-0 p-0"> Odinukwe Stores</h4>
-        <p class="my-0 font-semibold">Invoice Recipt</p>
-    </div>
-    <div class="mx-auto shadow">
-        <img src="assets/Screenshot 2023-08-20 205144.png" alt="music_app ui">
-        <h4 class="text-2xl leading-9 m-0 p-0"> Music App UI</h4>
-        <p class="my-0 font-semibold">App UI</p>
-    </div>
-    </div>
+                                      <!--- Grid for development Ends here-->
+                                      <!--- Grid for development Ends here-->
+                                      <!--- Grid for development Ends here-->
+                                      <!--- Grid for development Ends here-->
+                                      <!--- Grid for development Ends here-->
 
-
-    <!--Grid For writing and Blogpost-->
-    <div class="container   blogContainer grid grid-col-1 md:grid-cols-2 gap-2 items-center mx-auto my-6 portfolio_projects hidden">
-        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto border border-gray-400 card">
+                                      <!--Grid For writing and Blogpost-->
+                                      <!--Grid For writing and Blogpost-->
+                                      <!--Grid For writing and Blogpost-->
+      <div class="container blogContainer grid grid-col-1 md:grid-cols-2 gap-6 items-center mx-auto my-6 portfolio_projects hidden">
+        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto card">
             <img src="assets/do_companies_need.png" alt="" class="h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center mx-auto headerImg overflow-hidden">
-            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r py-4 flex flex-col justify-between leading-normal border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4">
               <div class="mb-8">
                 <p class="text-sm text-gray-600 flex items-center justify-start gap-4">
                     <img width="20" height="20" src="https://img.icons8.com/office/40/book.png" alt="book"/>
                      Blog Post
                 </p>
-              <a href="https://vincentnam.hashnode.dev/do-companies-really-need-frontend-devs-after-a-website-launch" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block "target="_blank">Do Companies Need Frontend Devs After a Website launches?</a>
-                <small class="text-gray-700 text-base">one might wonder why a company would need a frontend developer once their website is live. <br> <span class="text-gray-400 font-semibold cursor-pointer readMore">Read more...</span></small>
+              <a href="https://vincentnam.hashnode.dev/do-companies-really-need-frontend-devs-after-a-website-launch" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block hover:opacity-70"target="_blank">Do Companies Need Frontend Devs After a Website launches?</a>
+                <p class="text-gray-700 text-base">one might wonder why a company would need a frontend developer once their website is live. <br> <span class="text-gray-900 hover:text-gray-500 font-semibold cursor-pointer readMore">Read more...</span></p>
               </div>
               <div class="flex items-center">
                 <img class="w-10 h-10 rounded-full mr-4" src="/assets/vin-pics.JPG" alt="Avatar of Jonathan Reinink">
@@ -135,15 +187,15 @@
               </div>
             </div>
           </div>
-        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto border border-gray-400 card">
+        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto card">
             <img src="assets/do_companies_need.png" alt="" class="h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center mx-auto headerImg overflow-hidden">
-            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r md:py-4">
               <div class="mb-8">
                 <p class="text-sm text-gray-600 flex items-center justify-start gap-4">
                     <img width="20" height="20" src="https://img.icons8.com/office/40/book.png" alt="book"/> Blog Post
                 </p>
-              <a href="https://vincentnam.hashnode.dev/has-front-end-development-gotten-way-too-complex" target="_blank" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block" target="_blank">Has Frontend Development gotten way too complex?</a>
-                <small class="text-gray-700 text-base">A decade ago, being a frontend engineer meant knowing HTML, CSS, Bootstrap, and jQuery.. <br> <span class="text-gray-400 font-semibold cursor-pointer readMore">Read more...</span></small>
+              <a href="https://vincentnam.hashnode.dev/has-front-end-development-gotten-way-too-complex" target="_blank" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block hover:opacity-70">Has Frontend Development gotten way too complex?</a>
+                <p class="text-gray-700 text-base">A decade ago, being a frontend engineer meant knowing HTML, CSS, Bootstrap, and jQuery.. <br> <span class="text-gray-900 hover:text-gray-500 font-semibold cursor-pointer readMore">Read more...</span></p>
               </div>
               <div class="flex items-center">
                 <img class="w-10 h-10 rounded-full mr-4" src="/assets/vin-pics.JPG" alt="Avatar of Jonathan Reinink">
@@ -154,15 +206,15 @@
               </div>
             </div>
           </div>
-        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto border border-gray-400 card">
+        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto  card">
             <img src="assets/tapswap_coin.png" alt="" class="h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center mx-auto headerImg overflow-hidden">
-            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r md:py-4">
               <div class="mb-8">
                 <p class="text-sm text-gray-600 flex items-center justify-start gap-4">
                     <img width="20" height="20" src="https://img.icons8.com/office/40/book.png" alt="book"/> Blog Post
                 </p>
-              <a href="https://vincentnam.hashnode.dev/do-companies-really-need-frontend-devs-after-a-website-launch" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block" target="_blank">6 ways to make money in Crypto</a>
-                <small class="text-gray-700 text-base"> it's important to understand what cryptocurrency is.<br> <span class="text-gray-400 font-semibold cursor-pointer readMore">Read more...</span></small>
+              <a href="https://vincentnam.hashnode.dev/do-companies-really-need-frontend-devs-after-a-website-launch" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block hover:opacity-70" target="_blank">6 ways to make money in cryptocurrency and Web3</a>
+                <p class="text-gray-700 text-base"> it's important to understand what cryptocurrency is.<br> <span class="text-gray-900 hover:text-gray-500 font-semibold cursor-pointer readMore">Read more...</span></p>
               </div>
               <div class="flex items-center">
                 <img class="w-10 h-10 rounded-full mr-4" src="/assets/vin-pics.JPG" alt="Avatar of Jonathan Reinink">
@@ -173,15 +225,15 @@
               </div>
             </div>
           </div>
-        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto border border-gray-400 card">
+        <div class="max-w-sm w-full lg:max-w-full lg:flex mx-auto  card">
             <img src="assets/steve_harveypics.png" alt="" class="h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center mx-auto headerImg overflow-hidden">
-            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div class=" bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r md:py-4">
               <div class="mb-8">
                 <p class="text-sm text-gray-600 flex items-center justify-start gap-4">
                     <img width="20" height="20" src="https://img.icons8.com/office/40/book.png" alt="book"/> Blog Post
                 </p>
-              <a href="https://vincentnam.hashnode.dev/do-companies-really-need-frontend-devs-after-a-website-launch" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block" target="_blank">How Do You Feel When Your Laptop Crashes?</a>
-                <small class="text-gray-700 text-base">...laptops and other mobile devices are indispensable...<br> <span class="text-gray-400 font-semibold cursor-pointer readMore">Read more...</span></small>
+              <a href="https://vincentnam.hashnode.dev/do-companies-really-need-frontend-devs-after-a-website-launch" class="text-gray-900 font-bold md:text-xl mb-2 cursor-pointer block hover:opacity-70" target="_blank">How Do u Feel When Your Laptop crashes?</a>
+                <p class="text-gray-700 text-base">..laptops and other mobile devices are indispensable..<br> <span class="text-gray-900 hover:text-gray-500 font-semibold cursor-pointer readMore">Read more...</span></p>
               </div>
               <div class="flex items-center">
                 <img class="w-10 h-10 rounded-full mr-4" src="/assets/vin-pics.JPG" alt="Avatar of Jonathan Reinink">
@@ -206,17 +258,19 @@
         <h1 class="text-5xl">What I DO</h1>
         
         <div class="grid grid-col-1 md:grid-cols-2 mx-auto gap-12">
-            <div>
+            <div class="whatIDo">
                 <p class="text-gray-500 border-b  border-gray-500 py-2">01</p>
                 <h4 class="text-xl my-6">Writing</h4>
-                <p class="text-gray-300">With great dedication to rersearching other than copy and paste works I write compelling, expository and educative contents on topics that sometimes revolve around Tech, Tech Tools and Guides.</p>
+                <p class="text-gray-300">
+                  With a deep commitment to conducting thorough research rather than relying on copy-pasting, I write compelling, well structured, and educational content. My work often explores  topics related to tech, tech tools, and detailed guides, aiming to provide clear and insightful information. 
+              </p>
                 <ul class="font-semibold text-gray-500 my-6 space-y-3">
                     <li class="my-0"><a href="https://github.com/iamvincentnam">Github</a></li>
-                    <li class="my-0"><a href="https://github.com/iamvincentnam">Ikokuonline Blogs</a></li>
+                    <li class="my-0 hover:opacity-70"><a href="https://ikokuonline.com/index.php/blog/">Ikokuonline Blogs</a></li>
                     <li class="my-0"><a href="https://vincentnam.hashnode.dev">Blog Posts</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="whatIDo">
                 <p class="text-gray-500 border-b  border-gray-500 py-2">02</p>
                 <h4 class="text-xl my-6">Web Development</h4>
                 <p class="text-gray-300">I make use of a variety of tools including Javascript, Bootstrap, Php along with css to make simple but captivating single page & multiple page website.Bringing your business ideas live to an online space. </p>
@@ -227,8 +281,8 @@
                 </ul>
             </div>
         </div>
-        <h3 class="my-6 text-xl  mx-auto text-gray-300 text-center w-100">
-            Get Full satisfying Package in <span class="text-yellow-600 text-xl">Design</span>, <span class="text-blue-900 text-xl"> Development</span> and <span class="text-gray-500 text-xl"> Writing</span>  When you utilize my services. Fees are very affordable and negotiable.
+        <h3 class="my-6 md:text-xl  mx-auto text-gray-300 w-100">
+            Get Full satisfying Package in <span class="text-yellow-600 text-xl">Design</span>, <span class="text-blue-900 text-xl"> Development</span> and <span class="text-gray-500 text-xl"> Writing</span>  When you utilize my services.
         </h3>
         <div class="flex gap-2 text-center items-center  border-t py-6">
             <img src="assets/vincentNam-snapshot.JPG"  alt="vin pics"  class="w-10 h-10 rounded-full">
@@ -239,7 +293,7 @@
         <span class="phone_num bg-white hidden rounded-full text-green-800 px-2 mx-2 font-semibold">+2348143999388</span>
         </p>
         <p class="text-gray-500 border-b  border-gray-500 py-2 uppercase mt-6 mb-4">Socials</p>
-        <ul class="flex gap-5 mx-auto items-center  md:justify-start justify-center">
+        <ul class="flex gap-10  items-center  md:justify-start justify-center bg-blue-100 border-t  text-blue-700 md:max-w-60 mr-auto py-4 rounded">
             <li><a href="https://vincentnam.hashnode.dev" target="_blank">
                 <img width="24" height="24" src="https://img.icons8.com/color/48/hashnode.png" alt="hashnode"/>
             </a></li>

@@ -4,6 +4,7 @@
 box-sizing: border-box;
 scroll-behavior: smooth;
 }
+
 /* .hi_am_vincent{
     text-shadow: 2px 2px 0 #3b3b3ba1 !important;} */
 .download_resume{
@@ -13,9 +14,9 @@ scroll-behavior: smooth;
 .portfolio_projects{
     cursor: pointer;
 }
-.portfolio_projects.development img{
+.development img{
    height: 300px !important;
-
+ 
 }
 .workCategorytab{cursor: pointer;}
 
@@ -23,3 +24,8 @@ section.blogContainer{
 box-sizing: border-box;
 }
 
+#aboutMe{
+   
+    position: relative;
+}
+/*  */
