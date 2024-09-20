@@ -28,4 +28,23 @@ box-sizing: border-box;
    
     position: relative;
 }
+
+.links li{
+    position: relative;
+}
+.links li:hover::after{
+display: block;
+}
+.links li:after{
+content: '';
+position: absolute;
+top: -5px;
+right: -5px;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+background-color: rgb(161, 32, 0);
+transition: ease-in .5s all;
+display: none;
+}
 /*  */
