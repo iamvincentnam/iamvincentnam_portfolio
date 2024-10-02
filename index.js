@@ -75,10 +75,10 @@ const allContents= document.querySelectorAll('.portfolio_projects');
 workCategoryTabs.forEach((tab,index)=>{  
 tab.addEventListener('click',()=>{
 workCategoryTabs.forEach((tab=> 
-tab.classList.remove('rounded-full', 'bg-gray-900', 'text-white','shadow-lg')));
+tab.classList.remove('rounded-full', 'bg-blue-700', 'text-white','shadow-lg')));
 
 
-tab.classList.add('rounded-full', 'bg-gray-900', 'text-white', 'shadow-lg');
+tab.classList.add('rounded-full', 'bg-blue-700', 'text-white', 'shadow-lg');
 
 allContents.forEach((content)=>{
 content.classList.add('hidden');
@@ -103,7 +103,7 @@ const blogCards = document.querySelectorAll('.blogContainer > .card');
 const devcards = document.querySelectorAll('.development > .devCard');
 const addClassToSomeGridItems = (items)=>{
  items.forEach((card)=>{
-    return    card.classList.add('shadow-lg', 'my-12', 'mx-auto');  
+    return    card.classList.add('shadow', 'my-12', 'mx-auto');  
         });
 }
 addClassToSomeGridItems(blogCards);

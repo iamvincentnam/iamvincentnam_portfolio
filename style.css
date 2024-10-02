@@ -4,9 +4,16 @@
 box-sizing: border-box;
 scroll-behavior: smooth;
 }
+main{
+    box-sizing: border-box;
+    /* background-color: blueviolet !important; */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto !important; 
+  
 
-/* .hi_am_vincent{
-    text-shadow: 2px 2px 0 #3b3b3ba1 !important;} */
+}
+
 .download_resume{
     width: 12em;
     /* border: 2px solid silver; */
@@ -24,11 +31,11 @@ section.blogContainer{
 box-sizing: border-box;
 }
 
+
 #aboutMe{
    
     position: relative;
 }
-
 .links li{
     position: relative;
 }
@@ -43,8 +50,7 @@ right: -5px;
 width: 7px;
 height: 7px;
 border-radius: 50%;
-background-color: rgb(161, 32, 0);
+background-color: rgb(255, 255, 255);
 transition: ease-in .5s all;
 display: none;
 }
-/*  */
