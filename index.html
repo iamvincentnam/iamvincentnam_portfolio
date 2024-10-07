@@ -11,10 +11,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CSSRulePlugin.min.js"></script>
 
 <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
-
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "XXWHJXg7MVvknsKwK",
+      });
+   })();
+</script>
   
 </head>
-<body class="px-4 bg-zinc-950 text-white">
+<body class="px-4 bg-slate-800 text-white">
  
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -29,8 +38,8 @@
         <li class ="navLink px-6 py-1 hover:text-gray-400"><a href="#">Solutions</a></li>
     </ul>
    </nav>
-
-   <header class="container mx-auto my-12" >
+<section class=" bg-slate-900 -mx-4 px-4">
+   <header class="container mx-auto my-12 py-1">
     <div class="flex items-center justify-between flex-col md:flex-row">
       <h2 class="text-3xl md:max-w-2xl lg:max-w-3xl text-gray-200 hi_am_vincent">Hi, I'm Vincent.</h2>
       <ul class="flex  gap-10  items-center  justify-center py-4 rounded my-12 links">
@@ -53,14 +62,14 @@
 <h4 class="text-2xl my-4" id="title">A <span class="" >Frontend </span>Developer/ <span>Technical Writer</span>.</h4>
   
 <div class="my-6 flex gap-1 items-center">
-    <a class="" href="#">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full hover:opacity-80 text-center">
+    <a class="" href="#contactForm_section">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:opacity-80 text-center">
         Start  project
       </button>  </a>
-    <a class="bg-blue-500 rounded-full  text-center text-white px-4 py-1 rounded-full hover:opacity-80 group" href="#"> <i class="las la-arrow-right -rotate-45 group-hover:rotate-0 transition w-5"></i><img class="-rotate-45 group-hover:rotate-0 transition w-5" width="30" height="30" src="https://img.icons8.com/material-two-tone/30/arrow.png" alt="arrow"/></a>
+    <!-- <a class="bg-blue-500 rounded-full  text-center text-white px-4 py-1 rounded-full hover:opacity-80 group" href="#"> <i class="las la-arrow-right -rotate-45 group-hover:rotate-0 transition w-5"></i><img class="-rotate-45 group-hover:rotate-0 transition w-5" width="30" height="30" src="https://img.icons8.com/material-two-tone/30/arrow.png" alt="arrow"/></a> -->
 </div>
 </header>
-
+</section>
 <section class="container mx-auto my-12 ">
   <h2 class="md:text-4xl text-center md:text-left text-3xl uppercase">
    About Me
@@ -70,7 +79,8 @@
     <h4 class=" md:text-xl my-6 leading-9  font-semibold md:font-normal md:max-w-3xl ml-auto aboutMe" id="aboutMe">
       A detailed-oriented Frontend Developer with passion for transforming ideas into impactful digital solutions. I work confidently with various technologies, including Javascript, PHP,  Vue js for development, alongside Adobe Illustrator, Adobe After Effects for design. I'm also proficient in MicroSoft Office applications. My commintment to diligence and innovation has earned me consistent praise for my works.  
       <div class="my-6">
-        <a class="download_resume flex gap-4  items-center font-bold  text-center bg-white p-2 rounded-full text-blue-700 hover:opacity-80 group w-45" href="assets/Vincent-Nam-Resume-2024.pdf" width="100px" download="vincent_namResume.pdf"> Download Resume <img class="-rotate-45 group-hover:rotate-0 transition  border rounded-full p-1" width="20" height="20" src="https://img.icons8.com/material-two-tone/30/arrow.png" alt="arrow"/> 
+        
+        <a type="button" class=" download_resume flex gap-4  items-center font-bold  text-center bg-white p-2 rounded text-blue-700 hover:opacity-80 group" href="assets/vincentnam_resume_2024.pdf" width="100px" download="vincent_namResume.pdf"> Download Resume <img class="-rotate-45 group-hover:rotate-0 transition  border rounded-full p-1" width="20" height="20" src="https://img.icons8.com/material-two-tone/30/arrow.png" alt="arrow"/> 
          </a>
       
     </div>
@@ -117,7 +127,10 @@ skills
 
 </section>
 
-<section class="work_done container mx-auto-my12  mx-auto p-4 rounded" id="works">
+<section class="work_done p-4 rounded bg-gray-900 -mx-4" id="works">
+  <div class="container mx-auto">
+
+
     <h2 class="md:text-4xl text-center md:text-left text-3xl my-6 uppercase ">
         Portfolio
     </h2>
@@ -305,7 +318,31 @@ skills
        
     
         </div>
-
+</div>
+</section>
+<section class="py-12 my-12 flex items-center justify-center justify-evenly container mx-auto " id="contactForm_section">
+  <div class="p-4 md:max-w-xl bg-slate-900 font-[sans-serif] contactForm-container">
+    <h1 class="text-3xl text-gray-100 font-extrabold text-center">Contact us</h1>
+    <form class="mt-8 space-y-6" id="contactForm">
+        <input type='text' placeholder='Name'
+            class="w-full py-3 px-4 text-gray-100 bg-slate-800 focus:bg-transparent text-sm outline-blue-500" id="name" required/>
+        <input type='email' placeholder='Email'
+            class="w-full py-3 px-4 text-gray-100 bg-slate-800 focus:bg-transparent text-sm outline-blue-500"  id="email"/>
+        <input type='text' placeholder='Subject'
+            class="w-full py-3 px-4 text-gray-100 bg-slate-800 focus:bg-transparent text-sm outline-blue-500" id="subject" required />
+        <textarea required placeholder='Message' rows="6" id="message"
+            class="w-full px-4 text-gray-100 bg-slate-800 focus:bg-transparent text-sm pt-3 outline-blue-500" id="message"></textarea>
+        <button type='submit'
+            class="text-blue-500 bg-gray-200 md:text-xl font-bold hover:bg-white tracking-wide rounded-md text-sm px-4 py-3 w-full submit-btn">Send</button>
+            <div class="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500 hidden" role="status" aria-label="loading">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <p id="contact_message" class="text-white text-green-700 capitalize text-xl">
+            </p>
+    </form>
+</div>
+<div class="md:flex hidden contact_illustration"
+><img src="assets/dynamic-man-working-in-online-support-service-via-laptop-1.png" alt="" width="450px"></div>
 </section>
 <section class="bg-gray-900 mt-6 py-12 text-white -mx-4">
     <footer class="container mx-auto  px-6">
@@ -340,7 +377,7 @@ skills
         </h3>
         <div class="flex gap-2 text-center items-center  border-t py-6">
             <img src="assets/vincentNam-snapshot.JPG"  alt="vin pics"  class="w-10 h-10 rounded-full">
-            <a class="bg-white text-center text-gray-900 px-4 py-1  font-semibold border rounded-full hover:opacity-80" href="#">Start  project </a>
+            <a class="bg-white text-center text-gray-900 px-4 py-1  font-semibold border rounded-full hover:opacity-80" href="#contactForm_section">Start  project </a>
             
         </div>
         <p class="">I would Like us to get in touch.  <a href="tel:+2348143999388" class="call_me underline "> Call Me</a>
@@ -450,9 +487,20 @@ skills
       </div>
 
     </div> -->
+ 
+<!-- <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+   })();
+</script> -->
 <script src="index.js">
 
   
 </script>
+<!-- <script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script> -->
 </body>
 </html>
