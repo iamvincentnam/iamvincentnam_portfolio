@@ -95,10 +95,10 @@ const allContents= document.querySelectorAll('.portfolio_projects');
 workCategoryTabs.forEach((tab,index)=>{  
 tab.addEventListener('click',()=>{
 workCategoryTabs.forEach((tab=> 
-tab.classList.remove('rounded-full', 'bg-blue-700', 'text-white','shadow-lg')));
+tab.classList.remove('rounded-full', 'border','shadow-lg')));
 
 
-tab.classList.add('rounded-full', 'bg-blue-700', 'text-white', 'shadow-lg');
+tab.classList.add('rounded-full', 'border', 'shadow-lg');
 
 allContents.forEach((content)=>{
 content.classList.add('hidden');

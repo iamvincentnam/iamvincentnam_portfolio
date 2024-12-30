@@ -13,10 +13,17 @@ main{
   
 
 }
-
+body{
+    background-color: #082f49 !important;
+  }
+  .hi_am_vincent{
+    background-color: #072940;  
+  }
+ .start_a_project{
+    border: 1px solid #fff;
+ }
 .download_resume{
-    width: 12em;
-    /* border: 2px solid silver; */
+    color:#082f49;
 }
 .portfolio_projects{
     cursor: pointer;
