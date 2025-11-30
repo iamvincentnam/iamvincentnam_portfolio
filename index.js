@@ -3,9 +3,33 @@
 // Register the CSSRulePlugi
 // Animate the pseudo-element
 
+ const small_profile_pics = document.querySelector('.small_profile_pics');
+   const close_pics = document.querySelector('#close');
+   const Big_profile_pics = document.querySelector('.big-img img');
+  //  console.log(small_pics, close_pics)
+  
+  
+  small_profile_pics.addEventListener('click', () => {
+        // Set the big image src
+        Big_profile_pics.src = small_profile_pics.getAttribute('src');
 
+        // Show the big image container
+        Big_profile_pics.parentElement.classList.add('show');
+
+        // Smooth scroll to it
+        Big_profile_pics.parentElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+      })
+      close_pics.addEventListener('click', () => {
+    // Hide the big image container
+    Big_profile_pics.parentElement.classList.remove('show');
+});
   document.addEventListener('DOMContentLoaded', () => {
-   
+  
+
+
 gsap.from('#aboutMe',{
     opacity:0, duration:1,y:100,delay:1
 })
