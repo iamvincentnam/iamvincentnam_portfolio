@@ -1,7 +1,6 @@
 
 
-// Register the CSSRulePlugi
-// Animate the pseudo-element
+
 
  const small_profile_pics = document.querySelector('.small_profile_pics');
    const close_pics = document.querySelector('#close');
@@ -26,6 +25,9 @@
     // Hide the big image container
     Big_profile_pics.parentElement.classList.remove('show');
 });
+
+// Register the CSSRulePlugi
+// Animate the pseudo-element
   document.addEventListener('DOMContentLoaded', () => {
   
 
@@ -136,9 +138,9 @@ navLinks.forEach((eachNav)=>{
 eachNav.addEventListener('click',()=>{
     console.log(eachNav)
     navLinks.forEach((nav)=>{
-   nav.classList.remove('rounded-full', 'bg-white', 'text-black', 'hover:text-gray-700');   
+   nav.classList.remove('rounded-full', 'bg-gray-800', 'text-white', 'hover:text-gray-100');   
     })
- eachNav.classList.add('rounded-full', 'bg-white', 'text-black', 'hover:text-gray-700');   
+ eachNav.classList.add('rounded-full', 'bg-gray-800', 'text-white', 'hover:text-gray-100');   
 })
 })
 
