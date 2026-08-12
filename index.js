@@ -5,25 +5,59 @@
  const small_profile_pics = document.querySelector('.small_profile_pics');
    const close_pics = document.querySelector('#close');
    const Big_profile_pics = document.querySelector('.big-img img');
-  //  console.log(small_pics, close_pics)
+  const big_img_text_caption =document.querySelector (".about_me_caption");
+  console.log(big_img_text_caption.textContent);
   
-  
+  // when my small profile image is clicked, it should be viewed bigger
   small_profile_pics.addEventListener('click', () => {
         // Set the big image src
         Big_profile_pics.src = small_profile_pics.getAttribute('src');
 
         // Show the big image container
         Big_profile_pics.parentElement.classList.add('show');
-
+ big_img_text_caption.textContent='About Me'
         // Smooth scroll to it
         Big_profile_pics.parentElement.scrollIntoView({
             behavior: 'smooth',
             block: 'center'
         });
-      })
+      });
+     
       close_pics.addEventListener('click', () => {
     // Hide the big image container
     Big_profile_pics.parentElement.classList.remove('show');
+});
+
+//when the images in the gallery section is clicked, it should be viewed big
+const gallery_imgs = document.querySelectorAll('#gallery .devCard img');
+
+const Big_gallery_imgs = document.querySelector('.big-img img');
+
+gallery_imgs.forEach((gallery_img) => {
+
+  gallery_img.addEventListener('click', () => {
+
+    // Set the big image source
+    Big_gallery_imgs.src = gallery_img.getAttribute('src');
+
+    // Show the big image container
+    Big_gallery_imgs.parentElement.classList.add('show');
+big_img_text_caption.textContent='Gallery'
+    // Smooth scroll to it
+    Big_gallery_imgs.parentElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+
+  });
+
+});
+
+close_pics.addEventListener('click', () => {
+
+  // Hide the big image container
+  Big_gallery_imgs.parentElement.classList.remove('show');
+big_img_text_caption.textContent='About Me'
 });
 
 // Register the CSSRulePlugi

@@ -211,3 +211,15 @@ margin:auto;
         transform: rotate(360deg) translate(175px) rotate(-360deg);
     }
   }
+
+  #gallery .devCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery .devCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+#gallery .devCard img {
+  cursor: pointer;
+}
