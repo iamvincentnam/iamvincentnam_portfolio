@@ -67,10 +67,10 @@ big_img_text_caption.textContent='About Me'
 
 
 gsap.from('#aboutMe',{
-    opacity:0, duration:1,y:100,delay:1
+    opacity:0, duration:1,y:100,delay:0
 })
 gsap.from('.aboutMe2',{
-    opacity:0,x:-50, duration:1,delay:2,
+    opacity:0,x:-50, duration:1,delay:0,
     ease: "power1.out",
 })
 
@@ -90,7 +90,7 @@ gsap.from('.devCard',{
 
   gsap.from('.skill_icons',{
     opacity:0, scale:0, duration:1,
-delay:2, stagger:.05,  ease: "power1.out", })
+delay:0, stagger:.05,  ease: "power1.out", })
    
   gsap.from('.whatIDo',{
     opacity:0, x:-40,duration:1,
