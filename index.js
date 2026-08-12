@@ -221,9 +221,12 @@ document.getElementById('subject').value
       remove_spinnerAnimation();
     })
     .catch((error) => {
-      contactMessage.textContent = 'Error sending message. Please try again.';
-      console.log(error)
-    });
+    console.error('EmailJS ERROR:', error);
+    console.error('Status:', error.status);
+    console.error('Text:', error.text);
+
+    contactMessage.textContent = 'Error sending message. Please try again.';
+});
 };
 function add_spinnerAnimation() {
   // Hide the submit button and show the spinner
